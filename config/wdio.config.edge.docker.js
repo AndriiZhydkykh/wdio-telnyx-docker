@@ -1,6 +1,6 @@
 const {config} = require("./wdio.conf");
 const dockerEdge = {
-
+    ...config,
     capabilities: [{
         maxInstances: 5,
         browserName: "MicrosoftEdge",
