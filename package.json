@@ -1,0 +1,35 @@
+{
+    "name": "webdriverio-tests",
+    "version": "0.1.0",
+    "description": "",
+    "private": true,
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@wdio/allure-reporter": "^7.25.2",
+        "@wdio/cli": "^7.25.2",
+        "@wdio/local-runner": "^7.25.2",
+        "@wdio/mocha-framework": "^7.25.2",
+        "@wdio/selenium-standalone-service": "^7.25.1",
+        "@wdio/spec-reporter": "^7.25.1",
+        "chromedriver": "^106.0.1",
+        "cross-env": "^7.0.3",
+        "npm-run-all": "^4.1.5",
+        "selenium-standalone": "^8.2.2",
+        "wdio-chromedriver-service": "^8.0.0"
+    },
+    "scripts": {
+        "test":"npx wdio run ./config/wdio.conf.js",
+        "test:chrome:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.headless.js",
+        "test:firefox:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.firefox.headless.js",
+        "test:edge:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.edge.headless.js",
+        "test:allBrowsers:headless": "npm-run-all -c -r test:chrome:headless test:firefox:headless test:edge:headless --parallel",
+        "test:firefoxAndEdge:headless": "npm-run-all test:firefox:headless test:edge:headless  --parallel",
+        "allureGenerate": "allure generate allure-results --clean",
+        "allureReportOpen": "allure open"
+    },
+    "dependencies": {
+        "allure-commandline": "^2.18.1"
+    }
+}
