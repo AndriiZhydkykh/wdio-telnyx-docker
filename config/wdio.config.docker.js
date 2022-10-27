@@ -23,3 +23,4 @@ const dockerAllBrowsers = {
         },
     }],
 };
+exports.config = dockerAllBrowsers;
