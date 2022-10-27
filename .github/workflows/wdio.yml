@@ -16,12 +16,12 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '14.x'
-    - name : docker
+    - name : docker compose selenium-4-grid
       run: docker-compose -f ./selenium-4-grid.yml up -d
     - name: Install dependencies
       run: npm ci
     - name: Run wdio tests
-      run: npm run docker:run
+      run: npm run dockerAllBrowsers:run
       if: always()
     - uses: actions/upload-artifact@master
       with:
