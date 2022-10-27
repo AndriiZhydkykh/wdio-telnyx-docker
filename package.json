@@ -20,11 +20,13 @@
         "wdio-chromedriver-service": "^8.0.0"
     },
     "scripts": {
+        "dockerServerRun":"docker-compose -f ./selenium-4-grid.yml up -d",
+        "dockerServerClose":"docker-compose -f ./selenium-4-grid.yml down",
         "dockerChrome:run":"cross-env TESTS_ENV=dockerUI npx wdio run ./config/wdio.config.chrome.docker.js",
         "dockerFireFox:run":"cross-env TESTS_ENV=dockerUI npx wdio run ./config/wdio.config.firefox.docker.js",
         "dockerEdge:run":"cross-env TESTS_ENV=dockerUI npx wdio run ./config/wdio.config.edge.docker.js",
         "dockerAllBrowsers:run":"npm-run-all -c dockerEdge:run dockerChrome:run dockerFireFox:run --parallel",
-        "dockerLocalAllBrowsers:run":"npm run all -c docker-compose -f ./selenium-4-grid.yml up -d ",
+        "dockerLocalAllBrowsers:run":"npm run all -c -f ./selenium-4-grid.yml up -d dockerChrome:run dockerFireFox:run dockerEdge:run",
         "test:chrome:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.headless.js",
         "test:firefox:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.firefox.headless.js",
         "test:edge:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.edge.headless.js",
