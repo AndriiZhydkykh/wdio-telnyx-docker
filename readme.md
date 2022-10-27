@@ -1,4 +1,5 @@
 # JavaScript auto test (webdriverIO chrome,firefox,microsoft edge and allure report) for site www.telnyx.com
+## You can run tests local, in local headless mode and in the docker
 
 ## Installation: 
 - Install node js v18.9.0 or higher
@@ -57,6 +58,7 @@ npm run test:edge"
 ```
 ---
 #### To run tests use docker in all browsers
+##### Run the  docker in your machine and type in the terminal these commands
 
 ```
 npm run dockerServerRun
@@ -65,6 +67,7 @@ npm run dockerServerRun
 ```
 npm run test:dockerAllBrowsers
 ```
+
 To run tests in chrome or firefox or edge browsers use docker:
 
 ##### Run the  docker in your machine and type in the terminal these commands
@@ -72,7 +75,6 @@ To run tests in chrome or firefox or edge browsers use docker:
 ```
 npm run dockerServerRun
 ```
-
 ```
 npm run test:dockerChrome
 ```
@@ -85,7 +87,7 @@ npm run test:dockerEdge
 ######
 To see how to pass tests run in docker open http://localhost:4444/ui/index.html#/sessions after running the tests
 
-#### For close the docker server 
+#### After the tests closed docker server
 
 ```
 npm run dockerServerClose
