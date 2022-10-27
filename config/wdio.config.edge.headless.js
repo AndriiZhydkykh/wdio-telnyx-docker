@@ -1,5 +1,5 @@
 const { config } = require("./wdio.conf");
-const chromeHeadlessConfig = {
+const edgeHeadlessConfig = {
     ...config,
     services: [['selenium-standalone', { chromiumedge: 'latest' }]], 
     capabilities: [{
@@ -12,4 +12,4 @@ const chromeHeadlessConfig = {
 
 };
 
-exports.config = chromeHeadlessConfig;
+exports.config = edgeHeadlessConfig;

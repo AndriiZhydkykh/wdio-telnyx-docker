@@ -27,12 +27,18 @@
         "test:dockerEdge":"cross-env TESTS_ENV=dockerUI npx wdio run ./config/wdio.config.edge.docker.js",
         "test:dockerAllBrowsers":"npm-run-all -c test:dockerEdge test:dockerChrome test:dockerFireFox --parallel",
         "test:chrome:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.headless.js",
+        "test:chrome": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.js",
+        "test:chrome:OneFile": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.headless.js --spec",
         "test:firefox:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.firefox.headless.js",
+        "test:firefox": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.firefox.js",
+        "test:firefox:OneFile": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.firefox.headless.js --spec",
         "test:edge:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.edge.headless.js",
+        "test:edge": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.edge.js",
+        "test:edge:OneFile": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.edge.headless.js --spec",
         "test:allBrowsers:headless": "npm-run-all -c -r test:chrome:headless test:firefox:headless test:edge:headless --parallel",
+        "test:allBrowsers": "npm-run-all -c -r test:chrome test:firefox test:edge --parallel",
         "allureGenerate": "allure generate allure-results --clean",
-        "allureReportOpen": "allure open",
-        "runOneFile":""
+        "allureReportOpen": "allure open"
     },
     "dependencies": {
         "allure-commandline": "^2.18.1"

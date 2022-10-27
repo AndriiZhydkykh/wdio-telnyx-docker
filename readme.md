@@ -19,7 +19,6 @@ npm i
 ```
 npm run test:allBrowsers:headless
 ```
-
 #### To run tests in chrome or firefox or edge browsers local headless mode:
 ```
 npm run test:chrome:headless"
@@ -30,14 +29,39 @@ npm run test:firefox:headless"
 ```
 npm run test:edge:headless"
 ```
-
+#### To run one file in chrome or firefox or edge browsers local headless mode:
+```
+npm run test:chrome:OneFile" + name file that you want to be run
+```
+```
+npm run test:firefox:OneFile" + name file that you want to be run
+```
+```
+npm run test:edge:OneFile" + name file that you want to be run
+```
+#### For example : npm run test:chrome:OneFile header.spec.js
+---
+#### To run tests in all browsers local :
+```
+npm run test:allBrowsers
+```
+#### To run tests in chrome or firefox or edge browsers local:
+```
+npm run test:chrome"
+```
+```
+npm run test:firefox"
+```
+```
+npm run test:edge"
+```
+---
 #### To run tests use docker in all browsers
 
-1. 
 ```
 npm run dockerServerRun
 ```
-2. 
+
 ```
 npm run test:dockerAllBrowsers
 ```
