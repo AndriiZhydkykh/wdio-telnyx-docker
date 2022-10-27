@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Run wdio tests
-      run: npm run dockerAllBrowsers:run
+      run: npm run test:dockerAllBrowsers
       if: always()
     - uses: actions/upload-artifact@master
       with:
