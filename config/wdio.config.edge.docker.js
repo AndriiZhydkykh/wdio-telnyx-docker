@@ -5,7 +5,7 @@ const dockerEdge = {
         maxInstances: 5,
         browserName: "MicrosoftEdge",
         'ms:edgeOptions': {
-            args: [ '--window-size=1920,1280', ]
+            args: [ '--window-size=1920,1280']
         },
     }],
 };
