@@ -21,6 +21,7 @@
     },
     "scripts": {
         "test":"npx wdio run ./config/wdio.conf.js",
+        "docker:run":"cross-env TESTS_ENV=dockerUI npx wdio run ./config/wdio.config.docker.js",
         "test:chrome:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.headless.js",
         "test:firefox:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.firefox.headless.js",
         "test:edge:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.edge.headless.js",
