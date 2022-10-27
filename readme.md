@@ -96,7 +96,8 @@ npm run dockerServerClose
 npm run allureReportOpen
 ```
 ---
+#### Report view
 
+<img width="418" alt="Allure report" src="https://live.staticflickr.com/65535/52457355632_d1696ae819.jpg">
 
-
-
+---
