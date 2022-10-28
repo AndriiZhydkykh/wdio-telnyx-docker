@@ -1,4 +1,5 @@
 const {config} = require("./wdio.conf");
+require("path");
 const chromeConfig = {
     ...config,
     services: [['selenium-standalone', {chrome: 'latest'}]], 
@@ -6,6 +7,7 @@ const chromeConfig = {
         maxInstances: 5,
         browserName: "chrome",
     }],
+    path: "/wd/hub",
 };
 
-exports.config = chromeHeadlessConfig;
+exports.config = chromeConfig;

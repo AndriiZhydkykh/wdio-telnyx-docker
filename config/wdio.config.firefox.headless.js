@@ -1,5 +1,5 @@
 const { config } = require("./wdio.conf");
-
+require("path");
 const firefoxHeadlessConfig = {
     ...config,
     services: [['selenium-standalone', { firefox: 'latest' }]],
@@ -12,7 +12,7 @@ const firefoxHeadlessConfig = {
             },
         },
     ],
-
+    path: "/wd/hub",
 };
 
 exports.config = firefoxHeadlessConfig;

@@ -1,8 +1,6 @@
 const allure = require('allure-commandline')
 exports.config = {
-    hostname: 'localhost',
-    port: 4444,
-    path: '/',
+ 
     //
     // ====================
     // Runner Configuration
