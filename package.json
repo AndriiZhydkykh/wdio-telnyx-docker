@@ -25,7 +25,7 @@
         "test:dockerChrome":"cross-env TESTS_ENV=dockerUI npx wdio run ./config/wdio.config.chrome.docker.js",
         "test:dockerFireFox":"cross-env TESTS_ENV=dockerUI npx wdio run ./config/wdio.config.firefox.docker.js",
         "test:dockerEdge":"cross-env TESTS_ENV=dockerUI npx wdio run ./config/wdio.config.edge.docker.js",
-        "test:dockerAllBrowsers":"npm-run-all -c --parallel test:dockerEdge test:dockerChrome test:dockerFireFox",
+        "test:dockerAllBrowsers":"npm-run-all -c test:dockerEdge test:dockerChrome test:dockerFireFox",
         "test:chrome:headless": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.headless.js",
         "test:chrome": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.js",
         "test:chrome:OneFile": "cross-env TESTS_ENV=ui npx wdio run ./config/wdio.config.chrome.headless.js --spec",
