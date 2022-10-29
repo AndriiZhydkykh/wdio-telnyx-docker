@@ -8,7 +8,7 @@ const firefoxHeadlessConfig = {
             maxInstances: 2,
             browserName: "firefox",
             'moz:firefoxOptions': {
-                args: ['-headless']
+                args: ['--headless', '--start-maximized', '--no-sandbox', '--disable-gpu', '--window-size=1280,800', '--allow-insecure-localhost']
             },
         },
     ],

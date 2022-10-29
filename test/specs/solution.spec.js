@@ -5,7 +5,7 @@ const SolutionPage= require('../pages/solutions.page');
 
 beforeEach(async function () {
   await MainPage.open();
-  await HelperScripts.maximizeWindow();
+  //await HelperScripts.maximizeWindow();
   await HelperScripts.closeModalCookiesWindow();
 });
 

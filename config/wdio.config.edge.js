@@ -6,6 +6,9 @@ const edgeConfig = {
     capabilities: [{
         maxInstances: 2,
         browserName: "MicrosoftEdge",
+        'ms:edgeOptions': {
+            args: [ '--start-maximized']
+        },
     }],
     path: "/wd/hub",
 };

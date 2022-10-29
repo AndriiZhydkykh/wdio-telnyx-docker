@@ -7,6 +7,9 @@ const firefoxConfig = {
         {
             maxInstances: 2,
             browserName: "firefox",
+            'moz:firefoxOptions': {
+                args: ['--start-maximized' ]
+            },
         },
     ],
     path: "/wd/hub",

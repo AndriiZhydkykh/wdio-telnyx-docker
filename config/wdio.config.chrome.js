@@ -6,6 +6,9 @@ const chromeConfig = {
     capabilities: [{
         maxInstances: 5,
         browserName: "chrome",
+        'goog:chromeOptions': {
+            args: [ '--start-maximized']
+        },
     }],
     path: "/wd/hub",
 };

@@ -5,7 +5,7 @@ const Network = require('../pages/network.page');
 
 beforeEach(async function () {
     await MainPage.open();
-    await HelperScripts.maximizeWindow();
+    //await HelperScripts.maximizeWindow();
     await HelperScripts.closeModalCookiesWindow();
   });
   
