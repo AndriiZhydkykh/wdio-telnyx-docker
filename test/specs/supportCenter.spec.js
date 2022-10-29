@@ -5,7 +5,6 @@ const SupportCenterPage = require('../pages/supportCenter.page');
 
 beforeEach(async function () {
     await MainPage.open();
-    //await HelperScripts.maximizeWindow();
     await HelperScripts.closeModalCookiesWindow();
   });
   

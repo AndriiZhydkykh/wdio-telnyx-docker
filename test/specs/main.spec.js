@@ -2,7 +2,6 @@ const HelperScripts = require('../../helper/helper.scripts');
 const MainPage = require('../pages/main.page');
 beforeEach(async function () {
     await MainPage.open();
-    //await HelperScripts.maximizeWindow();
     await HelperScripts.closeModalCookiesWindow();
   });
   

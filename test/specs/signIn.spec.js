@@ -5,7 +5,6 @@ const SignInPage = require('../pages/signIn.page');
 
 beforeEach(async function () {
     await MainPage.open();
-    //await HelperScripts.maximizeWindow();
     await HelperScripts.closeModalCookiesWindow();
   });
   

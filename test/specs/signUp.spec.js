@@ -6,7 +6,6 @@ const SignUpPage = require('../pages/signUp.page');
 
 beforeEach(async function () {
   await MainPage.open();
-  //await HelperScripts.maximizeWindow();
   await HelperScripts.closeModalCookiesWindow();
 });
 
